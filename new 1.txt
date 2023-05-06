@@ -1,0 +1,24 @@
+   //add to vp before the last two </div></div>
+   <div class="singer">
+          <?php if($role_id == 2){
+             echo "<h3>Uploaded Songs</h3>";
+            
+             if(!empty($song_name)){
+               echo "<table>";
+               echo "<tr><th>#</th><th>Name</th><th>Year</th><th>liked</th></tr>";
+               for(;$i > -1 ; $i--){
+               static $k = 1; 
+              echo "<tr>"; 
+              echo "<td>";?><a href="veiwsong.php?id=<?php echo $i ?>"><?php echo $k; ?> </a><?php echo "</td><td>"?><a href="veiwsong.php?id=<?php echo $i ?>"><?php echo $song_name[$i] ; ?> </a><?php echo "</td><td>" ; ?><a href="veiwsong.php?id=<?php echo $i ?>"><?php echo $year[$i]; ?> </a><?php ; 
+              echo "<td>"; echo $count[$i]; echo "</td>";
+              echo "</tr>"; $k++;
+            }  echo "</table>";
+
+             }else{
+               echo "<h4>none</h4>";
+             }
+
+          }
+           ?>
+        
+        </div>
